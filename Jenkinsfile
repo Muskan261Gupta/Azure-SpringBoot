@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
+                bat "rmdir  /s /q Azure-SpringBoot"
                 bat "git clone https://github.com/Muskan261Gupta/Azure-SpringBoot.git"
                 bat "mvn clean -f Azure-SpringBoot"
             }
