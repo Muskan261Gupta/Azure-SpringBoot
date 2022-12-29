@@ -11,11 +11,6 @@ pipeline {
                 bat "mvn clean -f Azure-SpringBoot"
             }
         }
-        stage('install') {
-            steps {
-                bat "mvn install -f Azure-SpringBoot"
-            }
-        }
         stage('test') {
             steps {
                 bat "mvn test -f Azure-SpringBoot"
